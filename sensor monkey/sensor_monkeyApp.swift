@@ -11,7 +11,7 @@ import SwiftUI
 struct sensor_monkeyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SensorDashboardView()
         }
     }
 }
