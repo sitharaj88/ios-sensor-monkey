@@ -32,7 +32,7 @@ struct SensorDashboardView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Sensor Monitor")
+            .navigationTitle("Sensor Monkey")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
