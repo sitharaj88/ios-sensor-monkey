@@ -233,7 +233,7 @@ struct SensorCardView: View {
                     Spacer()
                     
                     if let data = data {
-                        VStack(alignment: .trailing, spacing: 2) {
+                        VStack(alignment: .trailing, spacing: 4) {
                             AutoMarqueeText(
                                 text: data.value.displayValue,
                                 font: .caption,
@@ -242,12 +242,15 @@ struct SensorCardView: View {
                                 speed: 25.0
                             )
                             .fontWeight(.medium)
-                            .frame(maxWidth: 60, alignment: .trailing)
+                            .frame(maxWidth: 80, alignment: .trailing)
+                            .lineLimit(1)
                             
                             Text(sensorType.unit)
                                 .font(.caption2)
                                 .foregroundColor(.secondary)
+                                .frame(maxWidth: 80, alignment: .trailing)
                         }
+                        .frame(width: 80)
                     }
                 }
                 

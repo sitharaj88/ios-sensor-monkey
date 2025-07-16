@@ -109,6 +109,11 @@ class SensorDashboardViewModel: ObservableObject {
         activeSensors[data.type] = data
         dataStorageService.saveData(data)
         
+        // Update chart data in real-time for the selected sensor
+        if selectedSensor == data.type {
+            loadHistoricalData(for: data.type, from: Date().addingTimeInterval(-3600), to: Date())
+        }
+        
         // Check for alerts
         if let threshold = sensorSettings[data.type]?.alertThreshold {
             if data.value.numericValue > threshold {
