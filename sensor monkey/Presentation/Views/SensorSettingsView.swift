@@ -120,6 +120,8 @@ struct SensorSettingsRow: View {
                     get: { isMonitoring },
                     set: { _ in onToggle() }
                 ))
+                .toggleStyle(SwitchToggleStyle(tint: .green))
+                .frame(width: 55) // Improved width for better appearance
             }
             .contentShape(Rectangle())
             .onTapGesture {

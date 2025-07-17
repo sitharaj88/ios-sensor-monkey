@@ -168,6 +168,8 @@ struct StatisticView: View {
                     .foregroundColor(.secondary)
             }
         }
+        .frame(maxHeight: .infinity, alignment: .bottom)
+        .padding(.bottom, 6)
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(title): \(value) \(unit)")
     }
